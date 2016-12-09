@@ -1,6 +1,5 @@
 
 import { Book } from './shared/book';
-import { BookProduct } from './shared/bookProduct';
 
 export interface IAppState {
   books: IBookState;
@@ -12,5 +11,6 @@ export interface IBookState {
 }
 
 export interface ICardState {
-  products: BookProduct[];
+  items: Book[];
+  total: number;
 }

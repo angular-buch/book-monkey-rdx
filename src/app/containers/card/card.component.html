@@ -1,0 +1,5 @@
+<span>{{ total$ | async }}</span>
+<bm-card-item [item]="cardItem"
+              (removed)="removeItemFromCard($event)"
+              *ngFor="let cardItem of items$ | async">
+</bm-card-item>

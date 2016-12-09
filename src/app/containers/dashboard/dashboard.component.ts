@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
 import { NgRedux, select } from 'ng2-redux';
 import { Observable } from 'rxjs';
 
-import { BooksActions } from '../../actions';
+import { BooksActions, CardActions } from '../../actions';
 
 import { Book } from '../../shared/book';
 
@@ -18,9 +18,14 @@ export class DashboardComponent {
   @select((state: IAppState) => state.books.all) books$: Observable<Book[]>;
 
   constructor(private store: NgRedux<any>,
-              private books: BooksActions) { }
+              private books: BooksActions,
+              private card: CardActions) { }
 
   addBook(book: Book) {
     this.books.addSingle(book);
+  }
+
+  addBookToCard(book: Book) {
+    this.card.createSingle(book);
   }
 }

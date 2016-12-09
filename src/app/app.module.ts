@@ -10,15 +10,20 @@ import { AppComponent } from './app.component';
 import { BooksActions, CardActions } from './actions';
 
 import { BookFormComponent } from './components/book-form/book-form.component';
+import { BookItemComponent } from './components/book-item/book-item.component';
+import { CardItemComponent } from './components/card-item/card-item.component';
+
 import { DashboardComponent } from './containers/dashboard/dashboard.component';
-import { BookListComponent } from './components/book-list/book-list.component';
+import { CardComponent }      from './containers/card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BookFormComponent,
     DashboardComponent,
-    BookListComponent
+    BookItemComponent,
+    CardComponent,
+    CardItemComponent
   ],
   imports: [
     BrowserModule,

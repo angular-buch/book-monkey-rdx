@@ -14,7 +14,8 @@ export class BookFormComponent {
   submitted(form) {
     this.created.emit(new Book(
       form.controls['isbn'].value,
-      form.controls['title'].value
+      form.controls['title'].value,
+      form.controls['price'].value
     ));
   }
 }

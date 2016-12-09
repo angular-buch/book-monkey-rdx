@@ -1,2 +1,4 @@
 <bm-book-form (created)="addBook($event)"></bm-book-form>
-<bm-book-list [books]="books$ | async"></bm-book-list>
+<bm-book-item [book]="bookItem"
+              (added)="addBookToCard($event)"
+              *ngFor="let bookItem of books$ | async"></bm-book-item>
