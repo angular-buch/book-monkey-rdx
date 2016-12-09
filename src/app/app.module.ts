@@ -3,12 +3,10 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { NgReduxModule, NgRedux } from 'ng2-redux';
+import { NgReduxModule, DevToolsExtension } from 'ng2-redux';
 
 import { AppComponent } from './app.component';
 
-import { IAppState } from './app.state';
-import reducer from './reducers';
 import { BooksActions, CardActions } from './actions';
 
 import { BookFormComponent } from './components/book-form/book-form.component';
@@ -30,13 +28,9 @@ import { BookListComponent } from './components/book-list/book-list.component';
   ],
   providers: [
     BooksActions,
-    CardActions
+    CardActions,
+    DevToolsExtension
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-  constructor(ngRedux: NgRedux<IAppState>) {
-    const initialState = {};
-    ngRedux.configureStore(reducer, {});
-  }
-}
+export class AppModule { }

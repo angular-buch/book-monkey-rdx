@@ -1,10 +1,17 @@
 import { Component } from '@angular/core';
 
+import { NgRedux } from 'ng2-redux';
+
+import { IAppState } from './app.state';
+import { reducer }   from './reducers/index';
+
 @Component({
-  selector: 'app-root',
+  selector: 'bm-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  constructor(ngRedux: NgRedux<IAppState>) {
+    ngRedux.configureStore(reducer, {} as IAppState);
+  }
 }
