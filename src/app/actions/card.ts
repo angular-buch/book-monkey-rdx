@@ -1,3 +1,4 @@
+import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 
 import { NgRedux } from 'ng2-redux';
@@ -17,6 +18,8 @@ export	class	CardActions	{
   }
 
   removeSingle(book: Book) {
-    this.redux.dispatch({ type: REMOVE_ITEM, payload: book});
+    Observable.timer(2000).subscribe(() => {
+      this.redux.dispatch({ type: REMOVE_ITEM, payload: book});
+    });
   }
 }
