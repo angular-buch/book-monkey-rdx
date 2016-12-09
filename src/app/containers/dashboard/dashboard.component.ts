@@ -1,5 +1,5 @@
 import { IAppState } from './../../app.state';
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgRedux, select } from 'ng2-redux';
 import { Observable } from 'rxjs';
@@ -11,7 +11,8 @@ import { Book } from '../../shared/book';
 @Component({
   selector: 'bm-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  styleUrls: ['./dashboard.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DashboardComponent {
 

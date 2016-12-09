@@ -1,6 +1,6 @@
 import { Observable } from 'rxjs';
 import { IAppState } from './../../app.state';
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { select } from 'ng2-redux';
 
@@ -10,7 +10,8 @@ import { Book } from '../../shared/book';
 @Component({
   selector: 'bm-card',
   templateUrl: './card.component.html',
-  styleUrls: ['./card.component.css']
+  styleUrls: ['./card.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CardComponent{
   @select((state: IAppState) => state.card.total) total$: Observable<number>;

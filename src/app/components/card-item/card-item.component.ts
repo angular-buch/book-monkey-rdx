@@ -1,11 +1,13 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 
 import { Book } from '../../shared/book';
 
 @Component({
   selector: 'bm-card-item',
   templateUrl: './card-item.component.html',
-  styleUrls: ['./card-item.component.css']
+  styleUrls: ['./card-item.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
+
 })
 export class CardItemComponent {
 

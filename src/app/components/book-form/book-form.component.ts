@@ -1,11 +1,12 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 
 import { Book } from '../../shared/book';
 
 @Component({
   selector: 'bm-book-form',
   templateUrl: './book-form.component.html',
-  styleUrls: ['./book-form.component.css']
+  styleUrls: ['./book-form.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BookFormComponent {
 
