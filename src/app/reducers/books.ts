@@ -1,9 +1,14 @@
+import { IBookState } from './../app.state';
 import { ADD_BOOK } from '../actions/books';
 
-export function booksReducer(state = [], action) {
+const INITIAL_STATE: IBookState = {
+  all: []
+};
+
+export function booksReducer(state = INITIAL_STATE, action): IBookState {
   switch (action.type) {
     case ADD_BOOK:
-      return [...state, action.payload];
+      return { all: [...state.all, action.payload] };
     default:
       return state;
   }

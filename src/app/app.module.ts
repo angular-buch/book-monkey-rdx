@@ -7,6 +7,7 @@ import { NgReduxModule, NgRedux } from 'ng2-redux';
 
 import { AppComponent } from './app.component';
 
+import { IAppState } from './app.state';
 import reducer from './reducers';
 import { BooksActions, CardActions } from './actions';
 
@@ -34,8 +35,8 @@ import { BookListComponent } from './components/book-list/book-list.component';
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  constructor(ngRedux: NgRedux<any>) {
+  constructor(ngRedux: NgRedux<IAppState>) {
     const initialState = {};
-    ngRedux.configureStore(reducer, initialState);
+    ngRedux.configureStore(reducer, {});
   }
 }

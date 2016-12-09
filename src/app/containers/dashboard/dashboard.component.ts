@@ -1,3 +1,4 @@
+import { IAppState } from './../../app.state';
 import { Component } from '@angular/core';
 
 import { NgRedux, select } from 'ng2-redux';
@@ -14,7 +15,7 @@ import { Book } from '../../shared/book';
 })
 export class DashboardComponent {
 
-  @select('books') books$: Observable<Book[]>;
+  @select((state: IAppState) => state.books.all) books$: Observable<Book[]>;
 
   constructor(private store: NgRedux<any>,
               private books: BooksActions) { }
