@@ -1,8 +1,6 @@
-export const INCREMENT = 'INCREMENT_COUNT';
-
 export function booksReducer(state = 0, action) {
   switch (action.type) {
-    case INCREMENT:
+    case 'INCREMENT_COUNT':
       return state + action.payload;
     default:
       return state;
