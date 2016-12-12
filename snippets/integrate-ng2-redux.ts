@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
-
 import { NgReduxModule } from 'ng2-redux';
 
 import { AppComponent } from './app.component';
-
 import { BooksActions } from './actions';
 
 @NgModule({
