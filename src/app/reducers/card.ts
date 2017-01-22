@@ -9,18 +9,18 @@ const INITIAL_STATE: ICardState = {
 export function cardReducer(state = INITIAL_STATE, action): ICardState {
   switch (action.type) {
     case ADD_ITEM:
-      let enhanced = [...state.items, action.payload];
+      const enhanced = [...state.items, action.payload];
 
       return {
-         items: enhanced,
-         total: enhanced.map(i => i.price).reduce((x, y) => x + y, 0)
+        items: enhanced,
+        total: enhanced.map(i => i.price).reduce((x, y) => x + y, 0)
       };
     case REMOVE_ITEM:
-      let filtered = state.items.filter(book => book.isbn !== action.payload.isbn);
+      const filtered = state.items.filter(book => book.isbn !== action.payload.isbn);
 
       return {
-         items: filtered,
-         total: filtered.map(i => i.price).reduce((x, y) => x + y, 0)
+        items: filtered,
+        total: filtered.map(i => i.price).reduce((x, y) => x + y, 0)
       };
     default:
       return state;

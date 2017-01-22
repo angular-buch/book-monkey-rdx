@@ -18,8 +18,7 @@ export class DashboardComponent {
 
   @select((state: IAppState) => state.books.all) books$: Observable<Book[]>;
 
-  constructor(private store: NgRedux<any>,
-              private books: BooksActions,
+  constructor(private books: BooksActions,
               private card: CardActions) { }
 
   addBook(book: Book) {
