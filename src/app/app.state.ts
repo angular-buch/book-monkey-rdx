@@ -1,4 +1,3 @@
-
 import { Book } from './shared/book';
 
 export interface IAppState {
