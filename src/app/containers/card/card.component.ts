@@ -1,4 +1,4 @@
-import { Observable } from 'rxjs';
+import { Observable } from 'rxjs/Observable';
 import { IAppState } from './../../app.state';
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 

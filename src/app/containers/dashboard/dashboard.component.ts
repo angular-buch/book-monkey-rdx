@@ -2,7 +2,7 @@ import { IAppState } from './../../app.state';
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgRedux, select } from 'ng2-redux';
-import { Observable } from 'rxjs';
+import { Observable } from 'rxjs/Observable';
 
 import { BooksActions, CardActions } from '../../actions';
 
