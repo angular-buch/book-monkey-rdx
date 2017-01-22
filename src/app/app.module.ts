@@ -7,6 +7,8 @@ import {NgReduxModule, DevToolsExtension, NgRedux} from 'ng2-redux';
 
 import { AppComponent } from './app.component';
 
+import { environment } from './../environments/environment';
+
 import { BooksActions, CardActions } from './actions';
 
 import { BookFormComponent } from './components/book-form/book-form.component';
@@ -43,7 +45,11 @@ import { IAppState } from './app.state';
 export class AppModule {
   constructor(private ngRedux: NgRedux<IAppState>,
               private devTools: DevToolsExtension) {
-    let enhancers = [devTools.enhancer()];
+    let enhancers = [];
+
+    if (environment.production === false) {
+      enhancers = [...enhancers, devTools.enhancer()];
+    }
 
     this.ngRedux.configureStore(
       reducer,
