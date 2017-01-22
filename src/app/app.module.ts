@@ -29,7 +29,7 @@ import { CardComponent }      from './containers/card/card.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    NgReduxModule.forRoot()
+    NgReduxModule
   ],
   providers: [
     BooksActions,
