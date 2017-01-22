@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { NgReduxModule, DevToolsExtension } from 'ng2-redux';
+import {NgReduxModule, DevToolsExtension, NgRedux} from 'ng2-redux';
 
 import { AppComponent } from './app.component';
 
@@ -14,7 +14,9 @@ import { BookItemComponent } from './components/book-item/book-item.component';
 import { CardItemComponent } from './components/card-item/card-item.component';
 
 import { DashboardComponent } from './containers/dashboard/dashboard.component';
-import { CardComponent }      from './containers/card/card.component';
+import { CardComponent } from './containers/card/card.component';
+import { reducer } from './reducers/index';
+import { IAppState } from './app.state';
 
 @NgModule({
   declarations: [
@@ -38,4 +40,16 @@ import { CardComponent }      from './containers/card/card.component';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(private ngRedux: NgRedux<IAppState>,
+              private devTools: DevToolsExtension) {
+    let enhancers = [devTools.enhancer()];
+
+    this.ngRedux.configureStore(
+      reducer,
+      {} as IAppState,
+      [],
+      enhancers
+    );
+  }
+}
