@@ -20,8 +20,6 @@ export class CardComponent{
   constructor(private card: CardActions) { }
 
   removeItemFromCard(book: Book) {
-    console.log(book);
-
     this.card.removeSingle(book);
   }
 }
