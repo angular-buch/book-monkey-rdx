@@ -8,7 +8,7 @@ import { Book } from '../shared/book';
 export const ADD_BOOK = 'ADD_BOOK';
 
 @Injectable()
-export	class	BooksActions {
+export class BooksActions {
   constructor(private	redux: NgRedux<IAppState>) {}
 
   addSingle(book: Book) {
