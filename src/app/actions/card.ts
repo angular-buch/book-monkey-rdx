@@ -1,4 +1,4 @@
-import { Observable } from 'rxjs';
+import { Observable } from 'rxjs/Observable';
 import { Injectable } from '@angular/core';
 
 import { NgRedux } from 'ng2-redux';
@@ -9,9 +9,11 @@ import { Book } from '../shared/book';
 export const ADD_ITEM = 'ADD_ITEM';
 export const REMOVE_ITEM = 'REMOVE_ITEM';
 
+import 'rxjs/add/observable/timer';
+
 @Injectable()
-export	class	CardActions	{
-  constructor(private	redux: NgRedux<IAppState>)	{}
+export class	CardActions	{
+  constructor(private	redux: NgRedux<IAppState>) { }
 
   createSingle(book: Book) {
     this.redux.dispatch({ type: ADD_ITEM, payload: book });
