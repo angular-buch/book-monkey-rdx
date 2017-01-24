@@ -1,7 +1,7 @@
 <form class="ui form" #f="ngForm" (ngSubmit)="submitted(f)">
   <div class="field">
     <label>ISBN</label>
-    <input type="text" name="isbn" placeholder="123-642378421-4"ngModel>
+    <input type="text" name="isbn" placeholder="123-642378421-4" ngModel>
   </div>
   <div class="field">
     <label>Title</label>
@@ -11,5 +11,5 @@
     <label>Price in Euro</label>
     <input type="number" name="price" placeholder="Price in Euro" ngModel>
   </div>
-  <button class="ui button" type="submitted">Add Book</button>
+  <button class="ui button" type="submit">Add Book</button>
 </form>
