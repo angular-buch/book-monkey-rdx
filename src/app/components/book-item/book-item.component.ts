@@ -6,7 +6,7 @@ import { Book } from '../../shared/book';
   selector: 'bm-book-item',
   templateUrl: './book-item.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  styles: ['.ui.red.card.item { margin-bottom:8px; }']
+  styles: ['.ui.card.book { margin-bottom:8px; }']
 })
 export class BookItemComponent {
   @Input() book: Book;
