@@ -1,6 +1,15 @@
-<form #f="ngForm" (ngSubmit)="submitted(f)">
-  <input type="text" name="isbn" ngModel>
-  <input type="text" name="title" ngModel>
-  <input type="number" name="price" ngModel>
-  <button type="submitted">Add Book</button>
+<form class="ui form" #f="ngForm" (ngSubmit)="submitted(f)">
+  <div class="field">
+    <label>ISBN</label>
+    <input type="text" name="isbn" placeholder="123-642378421-4"ngModel>
+  </div>
+  <div class="field">
+    <label>Title</label>
+    <input type="text" name="title" placeholder="Title" ngModel>
+  </div>
+  <div class="field">
+    <label>Price</label>
+    <input type="number" name="price" placeholder="Price in €" ngModel>
+  </div>
+  <button class="ui button" type="submitted">Add Book</button>
 </form>

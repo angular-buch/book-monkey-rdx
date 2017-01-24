@@ -10,7 +10,6 @@ import { Book } from '../../shared/book';
 @Component({
   selector: 'bm-card',
   templateUrl: './card.component.html',
-  styleUrls: ['./card.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CardComponent{

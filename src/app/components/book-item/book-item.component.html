@@ -1,4 +1,12 @@
-<div>
-  {{ book.isbn }} - {{ book.title }}
-  <button (click)="added.emit(book)">Add to card</button>
+<div class="ui card book">
+  <div class="content">
+    <div class="header">{{ book.title }}</div>
+    <div class="description">ISBN: {{ book.isbn }}</div>
+     <div class="description">{{ book.price | currency:'EUR':true:'2.2-4' }}</div>
+  </div>
+  <div class="extra content">
+    <button class="ui button" (click)="added.emit(book)">
+      <i class="add icon"></i> Add to card
+    </button>
+  </div>
 </div>

@@ -1,4 +1,5 @@
-<span>{{ total$ | async }}</span>
+<h2>Warenkorb</h2>
+<span>{{ total$ | async | currency:'EUR':true:'2.2-4' }}</span>
 <bm-card-item [item]="cardItem"
               (removed)="removeItemFromCard($event)"
               *ngFor="let cardItem of items$ | async">

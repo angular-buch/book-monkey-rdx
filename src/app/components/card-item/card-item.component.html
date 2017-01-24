@@ -1,4 +1,9 @@
-<div>
-  {{ item.title }}
-  <button (click)="removed.emit(item)">Remove</button>
+<div class="ui red card item">
+  <div class="content">
+    <div class="header">{{ item.title }}</div>
+    <div class="description">{{ item.price | currency:'EUR':true:'2.2-4' }}</div>
+  </div>
+    <div class="extra content">
+      <button class="ui button" (click)="removed.emit(item)">Remove from card</button>
+  </div>
 </div>
