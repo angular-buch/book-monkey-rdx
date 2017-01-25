@@ -1,5 +1,5 @@
 // ...
-import { BooksActions, CardActions } from '../../actions';
+import { BooksActions, CartActions } from '../../actions';
 
 @Component({
   selector: 'bm-dashboard',
@@ -10,11 +10,11 @@ import { BooksActions, CardActions } from '../../actions';
 export class DashboardComponent {
 
   constructor(private books: BooksActions,
-              private card: CardActions) { }
+              private cart: CartActions) { }
 
   // ...
 
-  addBookToCard(book: Book) {
-    this.card.createSingle(book);
+  addBookToCart(book: Book) {
+    this.cart.createSingle(book);
   }
 }

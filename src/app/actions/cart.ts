@@ -12,7 +12,7 @@ export const REMOVE_ITEM = 'REMOVE_ITEM';
 import 'rxjs/add/observable/timer';
 
 @Injectable()
-export class CardActions	{
+export class CartActions	{
   constructor(private redux: NgRedux<IAppState>) { }
 
   createSingle(book: Book) {

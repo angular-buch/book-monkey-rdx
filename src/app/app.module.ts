@@ -9,14 +9,14 @@ import { AppComponent } from './app.component';
 
 import { environment } from './../environments/environment';
 
-import { BooksActions, CardActions } from './actions';
+import { BooksActions, CartActions } from './actions';
 
 import { BookFormComponent } from './components/book-form/book-form.component';
 import { BookItemComponent } from './components/book-item/book-item.component';
-import { CardItemComponent } from './components/card-item/card-item.component';
+import { CartItemComponent } from './components/cart-item/cart-item.component';
 
 import { DashboardComponent } from './containers/dashboard/dashboard.component';
-import { CardComponent } from './containers/card/card.component';
+import { CartComponent } from './containers/cart/cart.component';
 import { reducer } from './reducers/index';
 import { IAppState } from './app.state';
 
@@ -26,8 +26,8 @@ import { IAppState } from './app.state';
     BookFormComponent,
     DashboardComponent,
     BookItemComponent,
-    CardComponent,
-    CardItemComponent
+    CartComponent,
+    CartItemComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +37,7 @@ import { IAppState } from './app.state';
   ],
   providers: [
     BooksActions,
-    CardActions,
+    CartActions,
     DevToolsExtension
   ],
   bootstrap: [AppComponent]

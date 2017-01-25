@@ -4,7 +4,7 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { select } from 'ng2-redux';
 import { Observable } from 'rxjs/Observable';
 
-import { BooksActions, CardActions } from '../../actions';
+import { BooksActions, CartActions } from '../../actions';
 
 import { Book } from '../../shared/book';
 
@@ -18,13 +18,13 @@ export class DashboardComponent {
   @select((state: IAppState) => state.books.all) books$: Observable<Book[]>;
 
   constructor(private books: BooksActions,
-              private card: CardActions) { }
+              private cart: CartActions) { }
 
   addBook(book: Book) {
     this.books.addSingle(book);
   }
 
-  addBookToCard(book: Book) {
-    this.card.createSingle(book);
+  addBookToCart(book: Book) {
+    this.cart.createSingle(book);
   }
 }

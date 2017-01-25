@@ -3,5 +3,5 @@
 
 <h2>Books</h2>
 <bm-book-item [book]="bookItem"
-              (added)="addBookToCard($event)"
+              (added)="addBookToCart($event)"
               *ngFor="let bookItem of books$ | async"></bm-book-item>

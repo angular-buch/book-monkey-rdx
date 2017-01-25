@@ -1,12 +1,12 @@
-import { ICardState } from './../app.state';
-import { ADD_ITEM, REMOVE_ITEM } from './../actions/card';
+import { ICartState } from './../app.state';
+import { ADD_ITEM, REMOVE_ITEM } from '../actions/cart';
 
-const INITIAL_STATE: ICardState = {
+const INITIAL_STATE: ICartState = {
   items: [],
   total: 0
 };
 
-export function cardReducer(state = INITIAL_STATE, action): ICardState {
+export function cartReducer(state = INITIAL_STATE, action): ICartState {
   switch (action.type) {
     case ADD_ITEM:
       const enhanced = [...state.items, action.payload];

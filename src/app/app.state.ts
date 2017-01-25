@@ -2,14 +2,14 @@ import { Book } from './shared/book';
 
 export interface IAppState {
   books: IBookState;
-  card: ICardState;
+  cart: ICartState;
 }
 
 export interface IBookState {
   all: Book[];
 }
 
-export interface ICardState {
+export interface ICartState {
   items: Book[];
   total: number;
 }
