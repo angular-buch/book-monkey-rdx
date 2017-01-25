@@ -1,5 +1,4 @@
-/* ... */
-
+// ...
 import { BooksActions, CardActions } from '../../actions';
 
 @Component({
@@ -13,7 +12,7 @@ export class DashboardComponent {
   constructor(private books: BooksActions,
               private card: CardActions) { }
 
-  /* ... */
+  // ...
 
   addBookToCard(book: Book) {
     this.card.createSingle(book);

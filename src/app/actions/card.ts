@@ -12,8 +12,8 @@ export const REMOVE_ITEM = 'REMOVE_ITEM';
 import 'rxjs/add/observable/timer';
 
 @Injectable()
-export class	CardActions	{
-  constructor(private	redux: NgRedux<IAppState>) { }
+export class CardActions	{
+  constructor(private redux: NgRedux<IAppState>) { }
 
   createSingle(book: Book) {
     this.redux.dispatch({ type: ADD_ITEM, payload: book });
