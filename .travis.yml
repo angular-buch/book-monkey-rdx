@@ -1,0 +1,35 @@
+language: node_js
+node_js:
+  - 6.9.1
+
+branches:
+  only:
+    - master
+
+env:
+  global:
+    - CXX=g++-4.8
+    - GITHUB_ORG="https://GH_TOKEN@github.com/book-monkey2-build"
+    - GITHUB_NAME="The Buildbot"
+    - GITHUB_EMAIL="buildbot@angular2buch.de"
+    - Name=book-monkey-rdx
+
+cache:
+  directories:
+    - node_modules
+
+install:
+  - npm i --silent -g angular-cli@1.0.0-beta.26;
+  - npm i --silent -g angular-cli-ghpages;
+
+script:
+  - npm i;
+  - ng build --progress=false;
+  - ngh --repo="$GITHUB_ORG/$NAME.git" --name="$GITHUB_NAME" --email="$GITHUB_EMAIL";
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-4.8
