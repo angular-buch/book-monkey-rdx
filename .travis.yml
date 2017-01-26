@@ -25,6 +25,8 @@ install:
 script:
   - npm i;
   - ng build --progress=false;
+  - echo "$NAME.angular-buch.com" > dist/CNAME;
+  - cp dist/index.html dist/404.html;
   - ngh --repo="$GITHUB_ORG/$NAME.git" --name="$GITHUB_NAME" --email="$GITHUB_EMAIL";
 
 addons:
