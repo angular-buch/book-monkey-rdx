@@ -8,7 +8,10 @@ import { NgReduxModule, DevToolsExtension, NgRedux } from 'ng2-redux';
     // ...
     NgReduxModule
   ],
-  // ...
+  providers: [
+    // ...
+    DevToolsExtension
+  ]
 })
 export class AppModule {
   constructor(private ngRedux: NgRedux<IAppState>,
