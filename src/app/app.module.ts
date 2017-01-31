@@ -45,7 +45,9 @@ export class AppModule {
               private devTools: DevToolsExtension) {
     let enhancers = [];
 
-    enhancers = [...enhancers, devTools.enhancer()];
+    if (devTools.isEnabled()) {
+      enhancers = [...enhancers, devTools.enhancer()];
+    }
 
     this.ngRedux.configureStore(
       reducer,
