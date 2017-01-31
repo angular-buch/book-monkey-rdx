@@ -18,7 +18,8 @@ export class AppModule {
               private devTools: DevToolsExtension) {
     let enhancers = [];
 
-    if (environment.production === false) {
+    if (environment.production === false &&
+        devTools.isEnabled()) {
       enhancers = [...enhancers, devTools.enhancer()];
     }
 
