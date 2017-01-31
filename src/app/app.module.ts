@@ -7,8 +7,6 @@ import {NgReduxModule, DevToolsExtension, NgRedux} from 'ng2-redux';
 
 import { AppComponent } from './app.component';
 
-import { environment } from './../environments/environment';
-
 import { BooksActions, CartActions } from './actions';
 
 import { BookFormComponent } from './components/book-form/book-form.component';
@@ -47,9 +45,7 @@ export class AppModule {
               private devTools: DevToolsExtension) {
     let enhancers = [];
 
-    if (environment.production === false) {
-      enhancers = [...enhancers, devTools.enhancer()];
-    }
+    enhancers = [...enhancers, devTools.enhancer()];
 
     this.ngRedux.configureStore(
       reducer,
