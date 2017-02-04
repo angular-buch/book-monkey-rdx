@@ -19,7 +19,7 @@ cache:
     - node_modules
 
 install:
-  - npm i --silent -g angular-cli@1.0.0-beta.26
+  - npm i --silent -g @angular/cli@1.0.0-beta.30
   - npm i --silent -g angular-cli-ghpages
 
 script:
