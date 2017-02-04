@@ -1,3 +1,6 @@
+<h2>Add a new book</h2>
 <bm-book-form (created)="addBook($event)"></bm-book-form>
+
+<h2>Books</h2>
 <bm-book-item [book]="bookItem"
               *ngFor="let bookItem of books$ | async"></bm-book-item>
