@@ -3,8 +3,8 @@ import { Observable } from 'rxjs/Observable';
 import { NgRedux } from 'ng2-redux';
 
 @Injectable()
-export class CounterActions	{
-  constructor(private redux: NgRedux<number>) {}
+export class CounterActions {
+  constructor(private redux: NgRedux<number>) { }
 
   incrementAsync() {
     Observable.timer(2000).subscribe(() => {
