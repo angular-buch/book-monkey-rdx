@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgRedux } from 'ng2-redux';
+import { NgRedux } from '@angular-redux/store';
 
 import { reducer } from './reducers/index';
 

@@ -1,5 +1,5 @@
 // ...
-import { NgReduxModule, DevToolsExtension, NgRedux } from 'ng2-redux';
+import { NgReduxModule, DevToolsExtension, NgRedux } from '@angular-redux/store';
 
 
 @NgModule({

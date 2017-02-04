@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { NgReduxModule } from 'ng2-redux';
+import { NgReduxModule } from '@angular-redux/store';
 
 import { AppComponent } from './app.component';
 import { BooksActions } from './actions';

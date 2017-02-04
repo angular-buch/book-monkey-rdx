@@ -2,7 +2,7 @@ import { Observable } from 'rxjs/Observable';
 import { IAppState } from './../../app.state';
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 
-import { select } from 'ng2-redux';
+import { select } from '@angular-redux/store';
 
 import { CartActions } from '../../actions/cart';
 import { Book } from '../../shared/book';

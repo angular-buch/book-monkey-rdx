@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import {NgReduxModule, DevToolsExtension, NgRedux} from 'ng2-redux';
+import {NgReduxModule, DevToolsExtension, NgRedux} from '@angular-redux/store';
 
 import { AppComponent } from './app.component';
 
