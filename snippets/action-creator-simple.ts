@@ -6,6 +6,6 @@ export class CounterActions {
   constructor(private	<TEX>\bfseries redux: NgRedux<number></TEX>) {}
 
   increment() {
-    this.redux.dispatch({ type: 'INCREMENT_COUNT' });
+<TEX>\boldline</TEX>    this.redux.dispatch({ type: 'INCREMENT_COUNT' });
   }
 }

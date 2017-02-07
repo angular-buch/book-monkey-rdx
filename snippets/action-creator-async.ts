@@ -7,7 +7,7 @@ export class CounterActions {
   constructor(private redux: NgRedux<number>) { }
 
   incrementAsync() {
-    Observable.timer(2000).subscribe(() => {
+<TEX>\boldline</TEX>    Observable.timer(2000).subscribe(() => {
       this.redux.dispatch({ type: 'INCREMENT_COUNT' });
     });
   }
