@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { NgRedux } from '@angular-redux/store';
+<TEX>\boldline</TEX>import { NgRedux } from '@angular-redux/store';
 
-@Injectable()
+<TEX>\boldline</TEX>@Injectable()
 export class CounterActions {
-  constructor(private	redux: NgRedux<number>) {}
+  constructor(private	<TEX>\bfseries redux: NgRedux<number></TEX>) {}
 
   increment() {
     this.redux.dispatch({ type: 'INCREMENT_COUNT' });
