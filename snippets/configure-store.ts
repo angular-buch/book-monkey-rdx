@@ -1,14 +1,17 @@
-import { Component } from '@angular/core';
-import { NgRedux } from '@angular-redux/store';
+// ...
 
-import { reducer } from './reducers/index';
+<TEX>\boldline</TEX>import {NgReduxModule, NgRedux} from '@angular-redux/store';
 
-@Component({
-  selector: 'bm-root',
-  templateUrl: './app.component.html'
+@NgModule({
+  // ...
+  imports: [
+    // ...
+<TEX>\boldline</TEX>    NgReduxModule
+  ],
+  bootstrap: [AppComponent]
 })
-export class AppComponent {
-  constructor(ngRedux: NgRedux<any>) {
-    ngRedux.configureStore(reducer, {});
+export class AppModule {
+  constructor(private ngRedux: NgRedux<any>) {
+<TEX>\boldline</TEX>    this.ngRedux.configureStore(reducer, {});
   }
 }
