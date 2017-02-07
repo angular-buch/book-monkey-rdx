@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { NgReduxModule } from '@angular-redux/store';
+<TEX>\boldline</TEX>import { NgReduxModule } from '@angular-redux/store';
 
 import { AppComponent } from './app.component';
 import { BooksActions } from './actions';
@@ -10,7 +10,7 @@ import { BooksActions } from './actions';
   ],
   imports: [
     /* andere Imports */
-    NgReduxModule.forRoot()
+<TEX>\boldline</TEX>    NgReduxModule.forRoot()
   ],
   providers: [
     BooksActions,
