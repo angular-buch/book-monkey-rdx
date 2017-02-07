@@ -1,17 +1,17 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 
-import { BooksActions } from '../actions';
+<TEX>\boldline</TEX>import { BooksActions } from '../actions';
 import { Book } from '../shared/book';
 
 @Component({
   selector: 'bm-dashboard',
   templateUrl: './dashboard.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+<TEX>\boldline</TEX>  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DashboardComponent {
-  constructor(private books: BooksActions) { }
+  constructor(private <TEX>\bfseries books: BooksActions</TEX>) { }
 
   addBook(book: Book) {
-    this.books.addSingle(book);
+<TEX>\boldline</TEX>    this.books.addSingle(book);
   }
 }
