@@ -5,16 +5,16 @@ import { BooksActions, CartActions } from '../../actions';
   selector: 'bm-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+<TEX>\boldline</TEX>  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DashboardComponent {
 
   constructor(private books: BooksActions,
-              private cart: CartActions) { }
+              private <TEX>\bfseries cart: CartActions</TEX>) { }
 
   // ...
 
-  addBookToCart(book: Book) {
-    this.cart.createSingle(book);
-  }
+<TEX>\boldline</TEX>  addBookToCart(book: Book) {
+<TEX>\boldline</TEX>    this.cart.createSingle(book);
+<TEX>\boldline</TEX>  }
 }

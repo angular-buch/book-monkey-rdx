@@ -10,16 +10,16 @@ import { NgReduxModule, DevToolsExtension, NgRedux } from '@angular-redux/store'
   ],
   providers: [
     // ...
-    DevToolsExtension
+<TEX>\boldline</TEX>    DevToolsExtension
   ]
 })
 export class AppModule {
   constructor(private ngRedux: NgRedux<IAppState>,
-              private devTools: DevToolsExtension) {
+              private <TEX>\bfseries devTools: DevToolsExtension</TEX>) {
     let enhancers = [];
 
     if (environment.production === false &&
-        devTools.isEnabled()) {
+        <TEX>\bfseries  devTools.isEnabled()</TEX>) {
       enhancers = [...enhancers, devTools.enhancer()];
     }
 
@@ -27,7 +27,7 @@ export class AppModule {
       reducer,
       {} as IAppState,
       [],
-      enhancers
+<TEX>\boldline</TEX>      enhancers
     );
   }
 }

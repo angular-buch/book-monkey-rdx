@@ -1,0 +1,27 @@
+import { Observable } from 'rxjs/Observable';
+import { Injectable } from '@angular/core';
+
+import { NgRedux } from '@angular-redux/store';
+
+import { IAppState } from '../app.state';
+import { Book } from '../shared/book';
+
+<TEX>\boldline</TEX>export const ADD_ITEM = 'ADD_ITEM';
+<TEX>\boldline</TEX>export const REMOVE_ITEM = 'REMOVE_ITEM';
+
+import 'rxjs/add/observable/timer';
+
+@Injectable()
+export class CartActions	{
+  constructor(private redux: NgRedux<IAppState>) { }
+
+  createSingle(book: Book) {
+<TEX>\boldline</TEX>    this.redux.dispatch({ type: ADD_ITEM, payload: book });
+  }
+
+  removeSingle(book: Book) {
+    Observable.timer(2000).subscribe(() => {
+<TEX>\boldline</TEX>      this.redux.dispatch({ type: REMOVE_ITEM, payload: book});
+    });
+  }
+}

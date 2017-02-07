@@ -1,7 +1,7 @@
-import { combineReducers } from 'redux';
+<TEX>\boldline</TEX>import { combineReducers } from 'redux';
 
 import { IAppState } from './../app.state';
-import { booksReducer as books } from './books';
+<TEX>\boldline</TEX>import { booksReducer as books } from './books';
 
 export const reducer = combineReducers<IAppState>({
   books

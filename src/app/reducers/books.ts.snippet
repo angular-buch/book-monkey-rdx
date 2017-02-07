@@ -1,0 +1,15 @@
+import { IBookState } from './../app.state';
+import { ADD_BOOK } from '../actions/books';
+
+<TEX>\boldline</TEX>const INITIAL_STATE: IBookState = {
+<TEX>\boldline</TEX>  all: []
+<TEX>\boldline</TEX>};
+
+export function booksReducer(state = INITIAL_STATE, action): IBookState {
+  switch (action.type) {
+    case ADD_BOOK:
+<TEX>\boldline</TEX>      return { all: [...state.all, action.payload] };
+    default:
+      return state;
+  }
+}

@@ -1,10 +1,10 @@
 import { IAppState } from './../../app.state';
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 
-import { select } from '@angular-redux/store';
+<TEX>\boldline</TEX>import { select } from '@angular-redux/store';
 import { Observable } from 'rxjs/Observable';
 
-import { BooksActions } from '../../actions';
+<TEX>\boldline</TEX>import { BooksActions } from '../../actions';
 
 import { Book } from '../../shared/book';
 
@@ -12,15 +12,15 @@ import { Book } from '../../shared/book';
   selector: 'bm-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+<TEX>\boldline</TEX>  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DashboardComponent {
 
-  @select((state: IAppState) => state.books.all) books$: Observable<Book[]>;
+<TEX>\boldline</TEX>  @select((state: IAppState) => state.books.all) books$: Observable<Book[]>;
 
-  constructor(private books: BooksActions) { }
+  constructor(private <TEX>\bfseries books: BooksActions</TEX>) { }
 
   addBook(book: Book) {
-    this.books.addSingle(book);
+<TEX>\boldline</TEX>    this.books.addSingle(book);
   }
 }
