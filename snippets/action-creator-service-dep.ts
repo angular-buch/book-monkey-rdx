@@ -12,7 +12,7 @@ export class BookActions {
 
   getBooks() {
     this.bs.getAll().subscribe((books: Book[]) => {
-      this.redux.dispatch({ type: 'BOOKS_LOADED', payload: books });
+<TEX>\boldline</TEX>      this.redux.dispatch({ type: 'BOOKS_LOADED', payload: books });
     });
   }
 }
