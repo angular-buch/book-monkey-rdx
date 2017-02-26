@@ -1,7 +1,4 @@
 import { aReducer as a } from './a-reducer';
-import { bReducer as b } from	'./b-reducer';
+import { bReducer as b } from './b-reducer';
 
-const reducer = {
-  a,
-  b
-};
+const reducer = { a, b };
