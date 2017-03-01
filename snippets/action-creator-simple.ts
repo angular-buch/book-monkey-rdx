@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 
 <TEX>\boldline</TEX>@Injectable()
 export class CounterActions {
-  constructor(private<TEX>\bfseries redux: NgRedux<number></TEX>) {}
+  constructor(private <TEX>\bfseries redux: NgRedux<number></TEX>) {}
 
   increment() {
 <TEX>\boldline</TEX>    this.redux.dispatch({ type: 'INCREMENT_COUNT' });
