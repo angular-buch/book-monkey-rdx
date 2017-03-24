@@ -1,4 +1,4 @@
-import { IAppState } from './../../app.state';
+import { IAppState } from '../../app.state';
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { select } from '@angular-redux/store';

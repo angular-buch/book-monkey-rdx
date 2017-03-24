@@ -1,4 +1,4 @@
-import { IBookState } from './../app.state';
+import { IBookState } from '../app.state';
 import { ADD_BOOK } from '../actions/books';
 
 const INITIAL_STATE: IBookState = {

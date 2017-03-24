@@ -1,4 +1,4 @@
-import { IAppState } from './../../app.state';
+import { IAppState } from '../../app.state';
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 <TEX>\boldline</TEX>import { select } from '@angular-redux/store';

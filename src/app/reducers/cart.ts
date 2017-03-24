@@ -1,4 +1,4 @@
-import { ICartState } from './../app.state';
+import { ICartState } from '../app.state';
 import { ADD_ITEM, REMOVE_ITEM } from '../actions/cart';
 
 const INITIAL_STATE: ICartState = {
