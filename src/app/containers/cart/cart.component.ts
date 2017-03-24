@@ -12,7 +12,7 @@ import { Book } from '../../shared/book';
   templateUrl: 'cart.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CartComponent{
+export class CartComponent {
   @select((state: IAppState) => state.cart.total) total$: Observable<number>;
   @select((state: IAppState) => state.cart.items) items$: Observable<Book[]>;
 
