@@ -1,14 +1,14 @@
-import { BookLibraryPage } from './app.po';
+import { BookMonkeyPage } from './app.po';
 
-describe('book-library App', function() {
-  let page: BookLibraryPage;
+describe('book-monkey App', () => {
+  let page: BookMonkeyPage;
 
   beforeEach(() => {
-    page = new BookLibraryPage();
+    page = new BookMonkeyPage();
   });
 
   it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('bm works!');
   });
 });
