@@ -7,14 +7,17 @@ import { select } from '@angular-redux/store';
 import { CartActions } from '../../actions/cart';
 import { Book } from '../../shared/book';
 
+export function selectCartTotal(state: IAppState) { return state.cart.total; }
+export function selectCartItems(state: IAppState) { return state.cart.items; }
+
 @Component({
   selector: 'bm-cart',
   templateUrl: 'cart.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CartComponent {
-  @select((state: IAppState) => state.cart.total) total$: Observable<number>;
-  @select((state: IAppState) => state.cart.items) items$: Observable<Book[]>;
+  @select(selectCartTotal) total$: Observable<number>;
+  @select(selectCartItems) items$: Observable<Book[]>;
 
   constructor(private cart: CartActions) { }
 

@@ -8,6 +8,9 @@ import { Observable } from 'rxjs/Observable';
 
 import { Book } from '../../shared/book';
 
+// the same as @select((state: IAppState) => state.books.all) but AOT ready
+export function selectBooksAll(state: IAppState) { return state.books.all; }
+
 @Component({
   selector: 'bm-dashboard',
   templateUrl: './dashboard.component.html',
@@ -16,7 +19,7 @@ import { Book } from '../../shared/book';
 })
 export class DashboardComponent {
 
-<TEX>\boldline</TEX>  @select((state: IAppState) => state.books.all) books$: Observable<Book[]>;
+<TEX>\boldline</TEX>  @select(selectBooksAll) books$: Observable<Book[]>;
 
   constructor(private <TEX>\bfseries books: BooksActions</TEX>) { }
 
