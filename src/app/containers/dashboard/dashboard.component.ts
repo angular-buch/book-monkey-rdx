@@ -8,7 +8,7 @@ import { BooksActions, CartActions } from '../../actions';
 
 import { Book } from '../../shared/book';
 
-export function selectBooksAll(state: IAppState) { return state.books.all; }
+export function allBooks(state: IAppState) { return state.books.all; }
 
 @Component({
   selector: 'bm-dashboard',
@@ -19,7 +19,7 @@ export class DashboardComponent {
 
   // NOT supported with AOT: @select((state: IAppState) => state.books.all) books$: Observable<Book[]>;
   // AOT ready:
-  @select(selectBooksAll) books$: Observable<Book[]>;
+  @select(allBooks) books$: Observable<Book[]>;
 
   constructor(private books: BooksActions,
               private cart: CartActions) { }
