@@ -4,17 +4,17 @@ import { BooksActions, CartActions } from '../../actions';
 @Component({
   selector: 'bm-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css'],
-<TEX>\boldline</TEX>  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrls: ['./dashboard.component.css'],/*TEX:\bfs*/
+  changeDetection: ChangeDetectionStrategy.OnPush/*TEX:\bfe*/
 })
 export class DashboardComponent {
 
   constructor(private books: BooksActions,
-              private <TEX>\bfseries cart: CartActions</TEX>) { }
+              private /*TEX:\bfs*/cart: CartActions/*TEX:\bfe*/) { }
 
   // ...
-
-<TEX>\boldline</TEX>  addBookToCart(book: Book) {
-<TEX>\boldline</TEX>    this.cart.createSingle(book);
-<TEX>\boldline</TEX>  }
+/*TEX:\bfs*/
+  addBookToCart(book: Book) {
+    this.cart.createSingle(book);
+  }/*TEX:\bfs*/
 }

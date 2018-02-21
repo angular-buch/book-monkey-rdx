@@ -11,8 +11,8 @@ export class BookActions {
     private bs: BookStoreService) { }
 
   getBooks() {
-    this.bs.getAll().subscribe((books: Book[]) => {
-<TEX>\boldline</TEX>      this.redux.dispatch({ type: 'BOOKS_LOADED', payload: books });
+    this.bs.getAll().subscribe((books: Book[]) => {/*TEX:\bfs*/
+      this.redux.dispatch({ type: 'BOOKS_LOADED', payload: books });/*TEX:\bfe*/
     });
   }
 }

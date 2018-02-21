@@ -1,7 +1,7 @@
 import { Observable } from 'rxjs/Observable';
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-
-<TEX>\boldline</TEX>import { select } from '@angular-redux/store';
+/*TEX:\bfs*/
+import { select } from '@angular-redux/store';/*TEX:\bfe*/
 
 @Component({
   selector: 'my-component',
@@ -17,8 +17,8 @@ export class MyComponent {
   @select() a$: Observable<any>;
   // oder
   @select('a') a$: Observable<any>;
-  // oder
-<TEX>\boldline</TEX>  @select(state => state.a) a$: Observable<any>;
+  // oder/*TEX:\bfs*/
+  @select(state => state.a) a$: Observable<any>;/*TEX:\bfe*/
 
   /*
    * Statusinformationen eines Reducers
@@ -26,6 +26,6 @@ export class MyComponent {
    */
 
   @select(['a', 'property']) a$: Observable<any>;
-  // oder
-<TEX>\boldline</TEX>  @select(state => state.a.property) a$: Observable<any>;
+  // oder/*TEX:\bfs*/
+  @select(state => state.a.property) a$: Observable<any>;/*TEX:\bfe*/
 }

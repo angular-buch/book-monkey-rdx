@@ -1,17 +1,17 @@
 import { Injectable } from '@angular/core';
-
-<TEX>\boldline</TEX>import { NgRedux } from '@angular-redux/store';
+/*TEX:\bfs*/
+import { NgRedux } from '@angular-redux/store';/*TEX:\bfe*/
 
 import { IAppState } from '../app.state';
 import { Book } from '../shared/book';
-
-<TEX>\boldline</TEX>export const ADD_BOOK = 'ADD_BOOK';
+/*TEX:\bfs*/
+export const ADD_BOOK = 'ADD_BOOK';/*TEX:\bfe*/
 
 @Injectable()
 export class BooksActions {
-  constructor(private <TEX>\bfseries redux: NgRedux<IAppState></TEX>) {}
+  constructor(private /*TEX:\bfs*/redux: NgRedux<IAppState>/*TEX:\bfe*/) {}
 
-  addSingle(book: Book) {
-<TEX>\boldline</TEX>    this.redux.dispatch({ type: ADD_BOOK, payload: book});
+  addSingle(book: Book) {/*TEX:\bfs*/
+    this.redux.dispatch({ type: ADD_BOOK, payload: book});/*TEX:\bfe*/
   }
 }

@@ -1,17 +1,17 @@
 // ...
-
-<TEX>\boldline</TEX>import {NgReduxModule, NgRedux} from '@angular-redux/store';
+/*TEX:\bfs*/
+import {NgReduxModule, NgRedux} from '@angular-redux/store';/*TEX:\bfe*/
 
 @NgModule({
   // ...
   imports: [
-    // ...
-<TEX>\boldline</TEX>    NgReduxModule
+    // .../*TEX:\bfs*/
+    NgReduxModule/*TEX:\bfe*/
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  constructor(private ngRedux: NgRedux<any>) {
-<TEX>\boldline</TEX>    this.ngRedux.configureStore(reducer, {});
+  constructor(private ngRedux: NgRedux<any>) {/*TEX:\bfs*/
+    this.ngRedux.configureStore(reducer, {});/*TEX:\bfe*/
   }
 }

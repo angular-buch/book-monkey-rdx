@@ -1,11 +1,11 @@
-import { Injectable } from '@angular/core';
-<TEX>\boldline</TEX>import { NgRedux } from '@angular-redux/store';
+import { Injectable } from '@angular/core';/*TEX:\bfs*/
+import { NgRedux } from '@angular-redux/store';
 
-<TEX>\boldline</TEX>@Injectable()
+@Injectable()/*TEX:\bfe*/
 export class CounterActions {
-  constructor(private <TEX>\bfseries redux: NgRedux<number></TEX>) {}
+  constructor(private /*TEX:\bfs*/redux: NgRedux<number>/*TEX:\bfe*/) {}
 
-  increment() {
-<TEX>\boldline</TEX>    this.redux.dispatch({ type: 'INCREMENT_COUNT' });
+  increment() {/*TEX:\bfs*/
+    this.redux.dispatch({ type: 'INCREMENT_COUNT' });/*TEX:\bfe*/
   }
 }

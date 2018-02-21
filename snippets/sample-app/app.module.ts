@@ -1,15 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
-<TEX>\boldline</TEX>import { NgRedux, NgReduxModule } from '@angular-redux/store';
+/*TEX:\bfs*/
+import { NgRedux, NgReduxModule } from '@angular-redux/store';/*TEX:\bfe*/
 
 import { AppComponent } from './app.component';
 
 import { BooksActions } from './actions';
-
-<TEX>\boldline</TEX>import { reducer } from './reducers/index';
-<TEX>\boldline</TEX>import { IAppState } from './app.state';
+/*TEX:\bfs*/
+import { reducer } from './reducers/index';
+import { IAppState } from './app.state';/*TEX:\bfe*/
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,7 +22,7 @@ import { BooksActions } from './actions';
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  constructor(private ngRedux: NgRedux<IAppState>) {
-<TEX>\boldline</TEX>    this.ngRedux.configureStore(reducer, {} as IAppState);
+  constructor(private ngRedux: NgRedux<IAppState>) {/*TEX:\bfs*/
+    this.ngRedux.configureStore(reducer, {} as IAppState);/*TEX:\bfe*/
   }
 }

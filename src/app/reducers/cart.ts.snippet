@@ -1,22 +1,22 @@
 import { ICartState } from '../app.state';
 import { ADD_ITEM, REMOVE_ITEM } from '../actions/cart';
-
-<TEX>\boldline</TEX>const INITIAL_STATE: ICartState = {
-<TEX>\boldline</TEX>  items: [],
-<TEX>\boldline</TEX>  total: 0
-<TEX>\boldline</TEX>};
+/*TEX:\bfs*/
+const INITIAL_STATE: ICartState = {
+  items: [],
+  total: 0
+};/*TEX:\bfe*/
 
 export function cartReducer(state = INITIAL_STATE, action): ICartState {
   switch (action.type) {
-    case ADD_ITEM:
-<TEX>\boldline</TEX>      const enhanced = [...state.items, action.payload];
+    case ADD_ITEM:/*TEX:\bfs*/
+      const enhanced = [...state.items, action.payload];/*TEX:\bfe*/
 
       return {
-        items: enhanced,
-<TEX>\boldline</TEX>        total: enhanced.map(i => i.price).reduce((x, y) => x + y, 0)
+        items: enhanced,/*TEX:\bfs*/
+        total: enhanced.map(i => i.price).reduce((x, y) => x + y, 0)/*TEX:\bfe*/
       };
-    case REMOVE_ITEM:
- <TEX>\boldline</TEX>     const filtered = state.items.filter(book => book.isbn !== action.payload.isbn);
+    case REMOVE_ITEM:/*TEX:\bfs*/
+      const filtered = state.items.filter(book => book.isbn !== action.payload.isbn);/*TEX:\bfe*/
 
       return {
         items: filtered,

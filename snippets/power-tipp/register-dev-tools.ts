@@ -9,25 +9,25 @@ import { NgReduxModule, DevToolsExtension, NgRedux } from '@angular-redux/store'
     NgReduxModule
   ],
   providers: [
-    // ...
-<TEX>\boldline</TEX>    DevToolsExtension
+    // .../*TEX:\bfs*/
+    DevToolsExtension/*TEX:\bfe*/
   ]
 })
 export class AppModule {
   constructor(private ngRedux: NgRedux<IAppState>,
-              private <TEX>\bfseries devTools: DevToolsExtension</TEX>) {
+              private /*TEX:\bfs*/devTools: DevToolsExtension/*TEX:\bfe*/) {
     let enhancers = [];
 
     if (environment.production === false &&
-        <TEX>\bfseries  devTools.isEnabled()</TEX>) {
+        /*TEX:\bfs*/ devTools.isEnabled()/*TEX:\bfe*/) {
       enhancers = [...enhancers, devTools.enhancer()];
     }
 
     this.ngRedux.configureStore(
       reducer,
       {} as IAppState,
-      [],
-<TEX>\boldline</TEX>      enhancers
+      [],/*TEX:\bfs*/
+      enhancers/*TEX:\bfe*/
     );
   }
 }
