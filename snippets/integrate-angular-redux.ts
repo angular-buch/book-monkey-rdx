@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';/*TEX:\bfs*/
-import { NgReduxModule } from '@angular-redux/store';/*TEX:\bfe*/
+import { NgModule } from '@angular/core';<TEX>\bfs</TEX>
+import { NgReduxModule } from '@angular-redux/store';<TEX>\bfe</TEX>
 
 import { AppComponent } from './app.component';
 import { BooksActions } from './actions';
@@ -9,8 +9,8 @@ import { BooksActions } from './actions';
     AppComponent,
   ],
   imports: [
-    /* andere Imports */ /*TEX:\bfs*/
-    NgReduxModule.forRoot()/*TEX:\bfe*/
+    /* andere Imports */ <TEX>\bfs</TEX>
+    NgReduxModule.forRoot()<TEX>\bfe</TEX>
   ],
   providers: [
     BooksActions,

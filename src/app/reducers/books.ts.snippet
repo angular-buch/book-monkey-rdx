@@ -1,14 +1,14 @@
 import { IBookState } from '../app.state';
 import { ADD_BOOK } from '../actions/books';
-/*TEX:\bfs*/
+<TEX>\bfs</TEX>
 const INITIAL_STATE: IBookState = {
   all: []
-};/*TEX:\bfe*/
+};<TEX>\bfe</TEX>
 
 export function booksReducer(state = INITIAL_STATE, action): IBookState {
   switch (action.type) {
-    case ADD_BOOK:/*TEX:\bfs*/
-      return { all: [...state.all, action.payload] };/*TEX:\bfe*/
+    case ADD_BOOK:<TEX>\bfs</TEX>
+      return { all: [...state.all, action.payload] };<TEX>\bfe</TEX>
     default:
       return state;
   }

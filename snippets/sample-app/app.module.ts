@@ -1,15 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-/*TEX:\bfs*/
-import { NgRedux, NgReduxModule } from '@angular-redux/store';/*TEX:\bfe*/
+<TEX>\bfs</TEX>
+import { NgRedux, NgReduxModule } from '@angular-redux/store';<TEX>\bfe</TEX>
 
 import { AppComponent } from './app.component';
 
 import { BooksActions } from './actions';
-/*TEX:\bfs*/
+<TEX>\bfs</TEX>
 import { reducer } from './reducers/index';
-import { IAppState } from './app.state';/*TEX:\bfe*/
+import { IAppState } from './app.state';<TEX>\bfe</TEX>
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,7 +22,7 @@ import { IAppState } from './app.state';/*TEX:\bfe*/
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  constructor(private ngRedux: NgRedux<IAppState>) {/*TEX:\bfs*/
-    this.ngRedux.configureStore(reducer, {} as IAppState);/*TEX:\bfe*/
+  constructor(private ngRedux: NgRedux<IAppState>) {<TEX>\bfs</TEX>
+    this.ngRedux.configureStore(reducer, {} as IAppState);<TEX>\bfe</TEX>
   }
 }

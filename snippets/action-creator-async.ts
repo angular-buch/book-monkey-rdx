@@ -6,8 +6,8 @@ import { NgRedux } from '@angular-redux/store';
 export class CounterActions {
   constructor(private redux: NgRedux<number>) { }
 
-  incrementAsync() {/*TEX:\bfs*/
-    Observable.timer(2000).subscribe(() => {/*TEX:\bfe*/
+  incrementAsync() {<TEX>\bfs</TEX>
+    Observable.timer(2000).subscribe(() => {<TEX>\bfe</TEX>
       this.redux.dispatch({ type: 'INCREMENT_COUNT' });
     });
   }
